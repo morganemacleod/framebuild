@@ -35,12 +35,12 @@ class Render:
 			p[0]+margin, p[1]+margin), fill)
 		return p
 
-	def draw_tube(self, tube):
+	def draw_tube(self, tube,fill="black"):
 		bottom = tube.tube_bottom
 		top = tube.tube_top
 
-		b = self.draw_point(bottom)
-		t = self.draw_point(top)
+		b = self.draw_point(bottom,fill)
+		t = self.draw_point(top,fill)
 		self.draw.line(b + t, fill="red")
 
 		radii = tube.draw_radii()
